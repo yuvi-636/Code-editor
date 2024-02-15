@@ -1,6 +1,16 @@
-let editor = document.querySelector("#editor");
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/cobalt");
+editor.getSession().setMode("ace/mode/javascript");
 
-ace.edit(editor, {
-    theme: "ace/theme/cobalt",
-    mode: "ace/mode/javascript",
-});
+function runCode() {
+    try {
+    
+        var code = editor.getValue();
+        
+        var func = new Function(code);
+
+        func();
+    } catch (error) {
+        console.error("Error executing code:", error);
+    }
+}
