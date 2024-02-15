@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>String Reversal</title>
+    <title>Run JavaScript Code</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +12,14 @@
     <div class="input-container">
         <label for="stringInput">Enter a string:</label>
         <textarea id="stringInput" rows="4" cols="50"></textarea>
-        <button onclick="reverseString()">Reverse</button>
     </div>
    
+    <div class="editor-container">
+        <div id="editor">//Program to reverse a string</div>
+    </div>
+
+    <button onclick="runCode()">Run</button>
+    
     <div class="output-container">
         <label for="reversedString">Reversed string:</label>
         <div id="reversedString"></div>
